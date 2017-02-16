@@ -1,4 +1,5 @@
 ![](img/EU_Regional_Development_Fund_horizontal_div_15.png "European Union | European Regional Development Fund | Investing in your future")
+
 ---
 
 X-Road Architecture  
@@ -11,15 +12,6 @@ Doc. ID: ARC-G
 ---
 
 # Version history
-
-123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 1 3 5 7 9 123456789 123456789
-
-110 chars long
-
---------------------------------------------------------------------------------
-
-80 chars long
-
 
  Date        | Version | Description                                                                                                   | Author             
 ------------ | ------- | ------------------------------------------------------------------------------------------------------------- | ------------------
@@ -34,6 +26,7 @@ Doc. ID: ARC-G
  16.12.2015  | 1.3     | Add environmental monitoring                                                                                  | Ilkka Seppälä      
  20.12.2016  | 1.4     | Added operational monitoring                                                                                  | Kristo Heero       
  15.02.2017  | 1.5     | Converted to Markdown                                                                                         | Toomas Mölder      
+
 
 # Table of Contents
 
@@ -150,7 +143,7 @@ The following list contains main design goals and design decisions of the X-Road
 [Figure 1](#Logical_structure_of_X_Road) shows the main components and interfaces of the X-Road system. The components that are not part of the X-Road core are shown on grey background. The components and the interfaces are described in detail in the following sections.
 
 <a id="Logical_structure_of_X_Road" class="anchor"></a>
-![](img/ARC-G_Logical_structure_of_X_Road.png)
+![](img/ARC-G_Logical_structure_of_X_Road.png "Logical structure of X-Road")
 
 Figure 1. Logical structure of X-Road
 
@@ -326,13 +319,12 @@ The environmental monitoring JMX service publishes environmental monitoring data
 
 # 4 Technology Matrix
 
-Table 1 presents the list of technologies used in the X-Road and mapping between the technologies and X-Road components.
+[Table 1](#Technology_matrix_of_the_X_Road) presents the list of technologies used in the X-Road and mapping between the technologies and X-Road components.
 
-<a id="Ref_Technology_matrix_of_the_X_Road" class="anchor"></a>Table 1. Technology matrix of the X-Road
+<a id="Technology_matrix_of_the_X_Road" class="anchor"></a>Table 1. Technology matrix of the X-Road
 
-|                    |                     |                    |                         |                                   |
-|--------------------|---------------------|--------------------|-------------------------|-----------------------------------|
 | **Technology**     | **Security server** | **Central server** | **Configuration proxy** | **Operational Monitoring Daemon** |
+|--------------------|---------------------|--------------------|-------------------------|-----------------------------------|
 | Java 8             | X                   | X                  | X                       | X                                 |
 | C                  | X                   | X                  |                         |                                   |
 | Logback            | X                   | X                  | X                       | X                                 |
@@ -360,7 +352,7 @@ Table 1 presents the list of technologies used in the X-Road and mapping between
 The diagram also shows what components are installed and hosted by any given organization. The governing authority installs and maintains central server and central security server. The configuration proxy is an optional component that is typically used for distributing configuration to federated X-Road instances. The service client and service provider organizations host their information system and security server that connects the information system to the X-Road.
 
 <a id="Deployment_view_of_X_Road" class="anchor"></a>
-![](img/ARC-G_Deployment_view_of_X_Road.png)
+![](img/ARC-G_Deployment_view_of_X_Road.png "Deployment view of X-Road")
 
 Figure 2. Deployment view of X-Road
 
