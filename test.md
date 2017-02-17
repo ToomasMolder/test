@@ -4,8 +4,8 @@
 
 [License](#license)  
 [1 Paragraph A](#1-paragraph-a)  
-&nbsp;&nbsp;&nbsp;&nbsp;[1.1 Sub-Paragraph A.A](#11-sub-paragraph-a-a)  
-&nbsp;&nbsp;&nbsp;&nbsp;[1.2 Sub-Paragraph A.B](#12-sub-paragraph-a-b)  
+&nbsp;&nbsp;&nbsp;&nbsp;[1.1 Sub-Paragraph A.A](#11-sub-paragraph-aa)  
+&nbsp;&nbsp;&nbsp;&nbsp;[1.2 Sub-Paragraph A.B](#12-sub-paragraph-ab)  
 [2 Paragraph B](#2-paragraph-b)  
 [The End](#the-end)
 
