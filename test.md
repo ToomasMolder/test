@@ -7,7 +7,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;[1.1 Sub-Paragraph A.A](#11-sub-paragraph-aa)  
 &nbsp;&nbsp;&nbsp;&nbsp;[1.2 Sub-Paragraph A.B](#12-sub-paragraph-ab)  
 [2 Paragraph B](#2-paragraph-b)  
-[The End](#the-end)
+[The End](#the-end)  
 
 ## License
 
@@ -40,13 +40,13 @@ This is sub-paragraph A.A
 ### 1.2 Sub-Paragraph A.B
 
 This is sub-paragraph A.B
-  
+
 This is sub-paragraph A.B
 
 This is sub-paragraph A.B
-  
+
 This is sub-paragraph A.B
-  
+
 ## 2. Paragraph B
 
 This is paragraph B
