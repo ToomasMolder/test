@@ -1,3 +1,6 @@
+# NB! I'm currently working, testing and changing this document!
+# Monday, February 27, 2017 UTC+2 / 09:51:00 p.m.
+
 # My Test Document
 
 ## Table of Contents
@@ -9,10 +12,47 @@
 [2 Paragraph B](#2-paragraph-b)  
 [The End](#the-end)  
 
+## Test Area
+
+To be tested within Github and also with pandoc PDF
+
+	>pandoc.exe --version
+	pandoc.exe 1.19.2.1
+	Compiled with pandoc-types 1.17.0.4, texmath 0.9, skylighting 0.1.1.4
+	Default user data directory: <localdir>
+	Copyright (C) 2006-2016 John MacFarlane
+	Web:  http://pandoc.org
+	This is free software; see the source for copying conditions.
+	There is no warranty, not even for merchantability or fitness
+
+Command 
+
+	pandoc.exe -s test.md  -f markdown_github -t latex+auto_identifiers -o test.pdf
+
+- Header 1. Paragraph A in form of `<div id = "1-paragraph-a" class = "anchor"></div>\n## 1. Paragraph A` (having prefix div id and prenumbered)
+- Header 2. Paragraph B in form of `## 2. Paragraph B` (prenumbered)
+- Header The End in form of `## The End` (no prenumbering)
+
+Do these internal links/anchors work for [test.pdf](test.pdf)?
+
+- Link [License #license](#license)
+
+- Link [1. Paragraph A #paragraph-a](#paragraph-a)
+- Link [1. Paragraph A #-paragraph-a](#-paragraph-a)
+- Link [1. Paragraph A #1-paragraph-a](#1-paragraph-a)
+
+- Link [2. Paragraph B #paragraph-b](#paragraph-b)
+- Link [2. Paragraph B #-paragraph-b](#-paragraph-b)
+- Link [2. Paragraph B #2-paragraph-b](#2-paragraph-b)
+
+- Link [The End ##the-end](#the-end)
+
+
 ## License
 
 This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 Unported License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.
 
+<div id = "1-paragraph-a" class = "anchor"></div>
 ## 1. Paragraph A
 
 This is paragraph A
@@ -37,7 +77,6 @@ This is sub-paragraph A.B
 
 But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?
 
-<div id="paragraph-b"></div>
 ## 2. Paragraph B
 
 **Section 1.10.33 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC**
