@@ -1,5 +1,5 @@
 # NB! I'm currently working, testing and changing this document!
-# Monday, February 27, 2017 UTC+2 / 09:51:00 p.m.
+# Monday, February 27, 2017 UTC+2 / 10:13:00 p.m.
 
 # My Test Document
 
@@ -33,24 +33,24 @@ Command
 
 Do these internal links/anchors work for [test.pdf](test.pdf)?
 
-- Link \[[License (#license)](#license)\] Github: OK
+- Link \[[License (#license)](#license)\] Github: OK Pandoc: OK
 
-- Link \[[1. Paragraph A (#paragraph-a)](#paragraph-a)\]  Github: NOK
-- Link \[[1. Paragraph A (#-paragraph-a)](#-paragraph-a)\]  Github: NOK
-- Link \[[1. Paragraph A (#1-paragraph-a)](#1-paragraph-a)\]  Github: OK
+- Link \[[1. Paragraph A (#paragraph-a)](#paragraph-a)\]  Github: NOK Pandoc: OK
+- Link \[[1. Paragraph A (#-paragraph-a)](#-paragraph-a)\]  Github: NOK Pandoc: NOK
+- Link \[[1. Paragraph A (#1-paragraph-a)](#1-paragraph-a)\]  Github: OK Pandoc: NOK
 
-- Link \[[2. Paragraph B (#paragraph-b)](#paragraph-b)\] Github: NOK
-- Link \[[2. Paragraph B (#-paragraph-b)](#-paragraph-b)\]  Github: NOK
-- Link \[[2. Paragraph B (#2-paragraph-b)](#2-paragraph-b)\]  Github: OK
+- Link \[[2. Paragraph B (#paragraph-b)](#paragraph-b)\] Github: NOK Pandoc: OK
+- Link \[[2. Paragraph B (#-paragraph-b)](#-paragraph-b)\]  Github: NOK Pandoc: NOK
+- Link \[[2. Paragraph B (#2-paragraph-b)](#2-paragraph-b)\]  Github: OK Pandoc: NOK
 
-- Link \[[The End (##the-end)](#the-end)\]  Github: OK
+- Link \[[The End (##the-end)](#the-end)\]  Github: OK Pandoc: OK
 
 
 ## License
 
 This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 Unported License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.
 
-<div id = "1-paragraph-a" class = "anchor"></div>
+<div id="1-paragraph-a" class="anchor"></div>
 ## 1. Paragraph A
 
 This is paragraph A
