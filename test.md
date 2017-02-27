@@ -46,7 +46,7 @@ Do these internal links/anchors work for [test_markdown.pdf](test_markdown.pdf)?
  \[[2. Paragraph B (#2-paragraph-b)](#2-paragraph-b)\] | OK          | NOK                    | NOK
  \[[The End (##the-end)](#the-end)\]                   | OK          | OK                     | OK
 
- NB! Please note the difference of result of links in column `Pandoc markdown` for #1-paragraph-a (OK) and #2-paragraph-b (NOK) due to `<div id = "1-paragraph-a" class = "anchor"></div>\n` added manually.
+ NB! Please note the difference of pandoc results for links with #1-paragraph-a: markdown_github is NOK but markdown is OK thanks to `<div id = "1-paragraph-a" class = "anchor"></div>\n` added manually.
 
 ## License
 
