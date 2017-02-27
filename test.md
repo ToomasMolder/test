@@ -33,17 +33,17 @@ Command
 
 Do these internal links/anchors work for [test.pdf](test.pdf)?
 
-- Link \[[License #license](#license)\] Github: OK
+- Link \[[License (#license)](#license)\] Github: OK
 
-- Link \[[1. Paragraph A #paragraph-a](#paragraph-a)\]  Github: NOK
-- Link \[[1. Paragraph A #-paragraph-a](#-paragraph-a)\]  Github: NOK
-- Link \[[1. Paragraph A #1-paragraph-a](#1-paragraph-a)\]  Github: OK
+- Link \[[1. Paragraph A (#paragraph-a)](#paragraph-a)\]  Github: NOK
+- Link \[[1. Paragraph A (#-paragraph-a)](#-paragraph-a)\]  Github: NOK
+- Link \[[1. Paragraph A (#1-paragraph-a)](#1-paragraph-a)\]  Github: OK
 
-- Link \[[2. Paragraph B #paragraph-b](#paragraph-b)\] Github: NOK
-- Link \[[2. Paragraph B #-paragraph-b](#-paragraph-b)\]  Github: NOK
-- Link \[[2. Paragraph B #2-paragraph-b](#2-paragraph-b)\]  Github: OK
+- Link \[[2. Paragraph B (#paragraph-b)](#paragraph-b)\] Github: NOK
+- Link \[[2. Paragraph B (#-paragraph-b)](#-paragraph-b)\]  Github: NOK
+- Link \[[2. Paragraph B (#2-paragraph-b)](#2-paragraph-b)\]  Github: OK
 
-- Link \[[The End ##the-end](#the-end)\]  Github: OK
+- Link \[[The End (##the-end)](#the-end)\]  Github: OK
 
 
 ## License
