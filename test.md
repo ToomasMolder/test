@@ -1,6 +1,3 @@
-# NB! I'm currently working, testing and changing this document!
-# Monday, February 27, 2017 UTC+2 / 10:13:00 p.m.
-
 # My Test Document
 
 ## Table of Contents
