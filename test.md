@@ -9,7 +9,7 @@
 
 ## Test Area
 
-To be tested within Github and also with pandoc PDF
+Internal links / anchors to be tested within Github and also with pandoc-generated PDF (+auto_identifiers).
 
 	>pandoc.exe --version
 	pandoc.exe 1.19.2.1
@@ -20,28 +20,33 @@ To be tested within Github and also with pandoc PDF
 	This is free software; see the source for copying conditions.
 	There is no warranty, not even for merchantability or fitness
 
-Command 
+Command for test_markdown_github.pdf (-f markdown_github)
 
-	pandoc.exe -s test.md  -f markdown_github -t latex+auto_identifiers -o test.pdf
+	pandoc.exe -s test.md  -f markdown_github -t latex+auto_identifiers -o test_markdown_github.pdf
 
+Command for test_markdown.pdf (-f markdown)
+
+	pandoc.exe -s test.md  -f markdown -t latex+auto_identifiers -o test_markdown.pdf
+
+	
 - Header 1. Paragraph A in form of `<div id = "1-paragraph-a" class = "anchor"></div>\n## 1. Paragraph A` (having prefix div id and prenumbered)
 - Header 2. Paragraph B in form of `## 2. Paragraph B` (prenumbered)
 - Header The End in form of `## The End` (no prenumbering)
 
-Do these internal links/anchors work for [test.pdf](test.pdf)?
+Do these internal links/anchors work for [test_markdown_github.pdf](test_markdown_github.pdf)?
 
-- Link \[[License (#license)](#license)\] Github: OK Pandoc: OK
+Do these internal links/anchors work for [test_markdown.pdf](test_markdown.pdf)?
 
-- Link \[[1. Paragraph A (#paragraph-a)](#paragraph-a)\]  Github: NOK Pandoc: OK
-- Link \[[1. Paragraph A (#-paragraph-a)](#-paragraph-a)\]  Github: NOK Pandoc: NOK
-- Link \[[1. Paragraph A (#1-paragraph-a)](#1-paragraph-a)\]  Github: OK Pandoc: NOK
+ Link                                                  | Github      | Pandoc markdown_github | Pandoc markdown
+ ----------------------------------------------------- | ----------- | ---------------------- | --------------
+ \[[License (#license)](#license)\]                    | OK          | OK                     | OK
+ \[[1. Paragraph A (#paragraph-a)](#paragraph-a)\]     | NOK         | OK                     | OK
+ \[[1. Paragraph A (#1-paragraph-a)](#1-paragraph-a)\] | OK          | NOK                    | OK
+ \[[2. Paragraph B (#paragraph-b)](#paragraph-b)\]     | NOK         | OK                     | OK
+ \[[2. Paragraph B (#2-paragraph-b)](#2-paragraph-b)\] | OK          | NOK                    | NOK
+ \[[The End (##the-end)](#the-end)\]                   | OK          | OK                     | OK
 
-- Link \[[2. Paragraph B (#paragraph-b)](#paragraph-b)\] Github: NOK Pandoc: OK
-- Link \[[2. Paragraph B (#-paragraph-b)](#-paragraph-b)\]  Github: NOK Pandoc: NOK
-- Link \[[2. Paragraph B (#2-paragraph-b)](#2-paragraph-b)\]  Github: OK Pandoc: NOK
-
-- Link \[[The End (##the-end)](#the-end)\]  Github: OK Pandoc: OK
-
+ NB! Please note the difference of result of links in column `Pandoc markdown` for #1-paragraph-a (OK) and #2-paragraph-b (NOK) due to `<div id = "1-paragraph-a" class = "anchor"></div>\n` added manually.
 
 ## License
 
