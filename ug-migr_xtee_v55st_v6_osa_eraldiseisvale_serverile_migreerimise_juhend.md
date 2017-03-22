@@ -109,7 +109,7 @@ Selle dokumendi eesmärk on anda konkreetsed juhised, kuidas läbi viia versioon
     * tls-key-importer-command
     * tls-key-exporter-command
 
-    Taaskäivita *xroad-proxy* ja *xroad-jetty* teenused. Käsurea terminalis:
+    6.4 Taaskäivita *xroad-proxy* ja *xroad-jetty* teenused. Käsurea terminalis:
 
        sudo restart xroad-proxy
        sudo restart xroad-jetty
