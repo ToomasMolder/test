@@ -81,7 +81,7 @@ Selle dokumendi eesmärk on anda konkreetsed juhised, kuidas läbi viia versioon
        psql -U postgres  
        ALTER USER serverconf WITH PASSWORD 'SIIA-VANA-SERVERCONF-PAROOL';  
        ALTER USER messagelog WITH PASSWORD 'SIIA-VANA-MESSAGELOG-PAROOL';  
-       \\q  
+       \q  
 
     2.3 Taaskäivita teenus *xroad-proxy*. Käsurea terminalis:
 
@@ -163,7 +163,7 @@ Kui v6 päringuvahendus on edukalt üle läinud uuele v6 turvaserverile, siis on
 
        psql -h 127.0.0.1 -U messagelog messagelog  
        select count(\*) from logrecord where discriminator='m' and not archived;  
-       \\q  
+       \q  
 
     2.4 Arhiveeri kõik loodud arhiivifailid (*mlog-\*.zip*) kaustast `/var/lib/xroad/` (kui seda pole konfigureeritud juba automaatselt tegema).
 
