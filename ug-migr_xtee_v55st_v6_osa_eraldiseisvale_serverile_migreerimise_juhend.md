@@ -1,7 +1,3 @@
-![](img/eu_regional_development_fund_horizontal_div_15.png "European Union | European Regional Development Fund | Investing in your future")
-
----
-
 # X-tee: v5.5-st v6 osa eraldiseisvale serverile migreerimise juhend
 
 
@@ -11,8 +7,6 @@ Dokumendi id: UG-MIGR
 
 ---
 
-<div id="versioonide-ajalugu" class="anchor"></div>
-
 ## Versioonide ajalugu
 
  Kuupäev    | Redaktsioon | Kirjeldus                                                     | Autor
@@ -21,51 +15,37 @@ Dokumendi id: UG-MIGR
  17.03.2017 | 0.2         | Märkus sisemise TLS-sertifikaadi loomise kohta                | Kristo Heero        
  22.03.2017 | 0.3         | Mittesisulised formaadimuudatused PDF-väljundi tarbeks        | Toomas Mölder
 
-<div id="sisukord" class="anchor"></div>
-
 ## Sisukord
 
 <!-- toc -->
 
 - [Litsents](#litsents)
 - [1 Sissejuhatus](#1-sissejuhatus)
-  * [1.1 Eesmärk](#11-eesmärk)
-  * [1.2 Viited](#12-viited)
+    * [1.1 Eesmärk](#11-eesmärk)
+    * [1.2 Viited](#12-viited)
 - [2 Migreerimine](#2-migreerimine)
-  * [2.1 Uue v6 turvaserveri kasutusele võtmine](#21-uue-v6-turvaserveri-kasutusele-võtmine)
-  * [2.2 Vana v6 osa kasutusest maha võtmine v5.5 turvaserveris](#22-vana-v6-osa-kasutusest-maha-võtmine-v55-turvaserveris)
+    * [2.1 Uue v6 turvaserveri kasutusele võtmine](#21-uue-v6-turvaserveri-kasutusele-võtmine)
+    * [2.2 Vana v6 osa kasutusest maha võtmine v5.5 turvaserveris](#22-vana-v6-osa-kasutusest-maha-võtmine-v55-turvaserveris)
 
 <!-- tocstop -->
-
-<div id="litsents" class="anchor"></div>
 
 ## Litsents
 
 This document is licensed under the Creative Commons Attribution-ShareAlike 3.0 Unported License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/
 
-<div id="1-sissejuhatus" class="anchor"></div>
-
 ## 1 Sissejuhatus
-
-<div id="11-eesmärk" class="anchor"></div>
 
 ### 1.1 Eesmärk
 
 Selle dokumendi eesmärk on anda konkreetsed juhised, kuidas läbi viia versioon 5.5 turvaserverist versiooni 6 migreerimine eraldiseisvasse serverisse.
 
-<div id="12-viited" class="anchor"></div>
-
 ### 1.2 Viited
 
 1.  <a id="Ref_IG-SS" class="anchor"></a>\[IG-SS\] Cybernetica AS. X-Road 6. Security Server Installation Guide. Document ID: IG-SS.
 
-2.  <a id="Ref_UG-SS" class="anchor"></a>\[UG-SS\] -- Cybernetica AS. X-Road 6. Security Server User Guide. Document ID: UG-SS.
-
-<div id="2-migreerimine" class="anchor"></div>
+2.  <a id="Ref_UG-SS" class="anchor"></a>\[UG-SS\] Cybernetica AS. X-Road 6. Security Server User Guide. Document ID: UG-SS.
 
 ## 2 Migreerimine
-
-<div id="21-uue-v6-turvaserveri-kasutusele-võtmine" class="anchor"></div>
 
 ### 2.1 Uue v6 turvaserveri kasutusele võtmine
 
@@ -139,8 +119,6 @@ Selle dokumendi eesmärk on anda konkreetsed juhised, kuidas läbi viia versioon
 
 10. Teavita X-tee keskust, et vana v6 turvaserveri IP-aadress asendataks uue v6 turvaserveri IP-aadressiga. Pärast aadressivahetust keskserveris levib muudatus globaalse konfiguratsiooniga kõigile turvaserveritele ning edaspidi päringuid vanasse v6 turvaserverisse enam ei suunata (kui turvaserver pakkus teenust).
 
-<div id="22-vana-v6-osa-kasutusest-maha-võtmine-v55-turvaserveris" class="anchor"></div>
-
 ### 2.2 Vana v6 osa kasutusest maha võtmine v5.5 turvaserveris
 
 Kui v6 päringuvahendus on edukalt üle läinud uuele v6 turvaserverile, siis on vaja v6 osa vanast v5.5 turvaserverist kasutusest maha võtta.
@@ -162,7 +140,7 @@ Kui v6 päringuvahendus on edukalt üle läinud uuele v6 turvaserverile, siis on
     2.3 Oota, kuni kõik sõnumilogi kirjed on andmebaasist arhiveeritud. Selle veendumiseks kontrolli sõnumilogi andmebaasist, kas arhiveerimata sõnumilogi kirjete arv on 0. Käsurea terminalis (vajaliku andmebaasi parooli leiad failis `/etc/xroad/db.properties` olevalt parameetrilt *messagelog.hibernate.connection.password*):
 
        psql -h 127.0.0.1 -U messagelog messagelog  
-       select count(\*) from logrecord where discriminator='m' and not archived;  
+       select count(*) from logrecord where discriminator='m' and not archived;  
        \q  
 
     2.4 Arhiveeri kõik loodud arhiivifailid (*mlog-\*.zip*) kaustast `/var/lib/xroad/` (kui seda pole konfigureeritud juba automaatselt tegema).
@@ -188,5 +166,3 @@ Kui v6 päringuvahendus on edukalt üle läinud uuele v6 turvaserverile, siis on
        echo manual > /etc/init/xtee55-monitor.override  
 
 3. Arhiveeri auditilogi fail `/var/log/xroad/audit.log`.
-
-4. Soovi korral arhiveeri ka muud logifailid kaustast `/var/log/xroad/`.
