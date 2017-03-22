@@ -7,7 +7,8 @@ Dokumendi id: UG-MIGR
 
 ---
 
-## Versiooniajalugu
+<div id="versioonide-ajalugu" class="anchor"></div>
+## Versioonide ajalugu
 
  Kuupäev    | Redaktsioon | Kirjeldus                                                     | Autor
  ---------- | ----------- | ------------------------------------------------------------- | --------------------
@@ -15,38 +16,45 @@ Dokumendi id: UG-MIGR
  17.03.2017 | 0.2         | Märkus sisemise TLS-sertifikaadi loomise kohta                | Kristo Heero        
  22.03.2017 | 0.3         | Mittesisulised formaadimuudatused PDF-väljundi tarbeks        | Toomas Mölder
 
+<div id="sisukord" class="anchor"></div>
 ## Sisukord
 
 <!-- toc -->
 
 - [Litsents](#litsents)
 - [1 Sissejuhatus](#1-sissejuhatus)
-  * [1.1 Eesmärk](#11-eesmark)
+  * [1.1 Eesmärk](#11-eesmärk)
   * [1.2 Viited](#12-viited)
 - [2 Migreerimine](#2-migreerimine)
-  * [2.1 Uue v6 turvaserveri kasutusele võtmine](#21-uue-v6-turvaserveri-kasutusele-votmine)
-  * [2.2 Vana v6 osa kasutusest maha võtmine v5.5 turvaserveris](#22-vana-v6-osa-kasutusest-maha-votmine-v55-turvaserveris)
+  * [2.1 Uue v6 turvaserveri kasutusele võtmine](#21-uue-v6-turvaserveri-kasutusele-võtmine)
+  * [2.2 Vana v6 osa kasutusest maha võtmine v5.5 turvaserveris](#22-vana-v6-osa-kasutusest-maha-võtmine-v55-turvaserveris)
 
 <!-- tocstop -->
 
+<div id="litsents" class="anchor"></div>
 ## Litsents
 
 This document is licensed under the Creative Commons Attribution-ShareAlike 3.0 Unported License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/
 
+<div id="1-sissejuhatus" class="anchor"></div>
 ## 1 Sissejuhatus
 
+<div id="11-eesmärk" class="anchor"></div>
 ### 1.1 Eesmärk
 
 Selle dokumendi eesmärk on anda konkreetsed juhised, kuidas läbi viia versioon 5.5 turvaserverist versiooni 6 migreerimine eraldiseisvasse serverisse.
 
+<div id="12-viited" class="anchor"></div>
 ### 1.2 Viited
 
 <a id="Ref_IG-SS" class="anchor"></a>\[IG-SS\] -- Cybernetica AS. X-Road 6. Security Server Installation Guide. Document ID: [IG-SS](https://github.com/ria-ee/X-Road/blob/develop/doc/Manuals/ig-ss_x-road_v6_security_server_installation_guide.md).
 
 <a id="Ref_UG-SS" class="anchor"></a>\[UG-SS\] -- Cybernetica AS. X-Road 6. Security Server User Guide. Document ID: [UG-SS](https://github.com/ria-ee/X-Road/blob/develop/doc/Manuals/ug-ss_x-road_6_security_server_user_guide.md).
 
+<div id="2-migreerimine" class="anchor"></div>
 ## 2 Migreerimine
 
+<div id="21-uue-v6-turvaserveri-kasutusele-võtmine" class="anchor"></div>
 ### 2.1 Uue v6 turvaserveri kasutusele võtmine
 
 1. Paigalda uus v6 turvaserver, kuid ära vii läbi turvaserveri esialgset initsialiseerimist (vt \[[IG-SS](#Ref_IG-SS)\]).
@@ -89,9 +97,9 @@ Selle dokumendi eesmärk on anda konkreetsed juhised, kuidas läbi viia versioon
 
     6.3 Eemalda sektsioonist *[proxy-ui]* järgmised parameetrid:
  
-   * clients-importer-command
-   * tls-key-importer-command
-   * tls-key-exporter-command
+    * clients-importer-command
+    * tls-key-importer-command
+    * tls-key-exporter-command
 
     Taaskäivita *xroad-proxy* ja *xroad-jetty* teenused. Käsurea terminalis:
 
@@ -119,6 +127,7 @@ Selle dokumendi eesmärk on anda konkreetsed juhised, kuidas läbi viia versioon
 
 10. Teavita X-tee keskust, et vana v6 turvaserveri IP-aadress asendataks uue v6 turvaserveri IP-aadressiga. Pärast aadressivahetust keskserveris levib muudatus globaalse konfiguratsiooniga kõigile turvaserveritele ning edaspidi päringuid vanasse v6 turvaserverisse enam ei suunata (kui turvaserver pakkus teenust).
 
+<div id="22-vana-v6-osa-kasutusest-maha-võtmine-v55-turvaserveris" class="anchor"></div>
 ### 2.2 Vana v6 osa kasutusest maha võtmine v5.5 turvaserveris
 
 Kui v6 päringuvahendus on edukalt üle läinud uuele v6 turvaserverile, siis on vaja v6 osa vanast v5.5 turvaserverist kasutusest maha võtta.
