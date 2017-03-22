@@ -1,3 +1,7 @@
+![](img/eu_regional_development_fund_horizontal_div_15.png "European Union | European Regional Development Fund | Investing in your future")
+
+---
+
 # X-tee: v5.5-st v6 osa eraldiseisvale serverile migreerimise juhend
 
 
@@ -53,9 +57,9 @@ Selle dokumendi eesmärk on anda konkreetsed juhised, kuidas läbi viia versioon
 
 ### 1.2 Viited
 
-<a id="Ref_IG-SS" class="anchor"></a>**\[IG-SS\]** -- Cybernetica AS. X-Road 6. Security Server Installation Guide. Document ID: IG-SS  https://github.com/ria-ee/X-Road/blob/develop/doc/Manuals/ig-ss_x-road_v6_security_server_installation_guide.md.
+1.  <a id="Ref_IG-SS" class="anchor"></a>\[IG-SS\] Cybernetica AS. X-Road 6. Security Server Installation Guide. Document ID: IG-SS.
 
-<a id="Ref_UG-SS" class="anchor"></a>**\[UG-SS\]** -- Cybernetica AS. X-Road 6. Security Server User Guide. Document ID: UG-SS  https://github.com/ria-ee/X-Road/blob/develop/doc/Manuals/ug-ss_x-road_6_security_server_user_guide.md.
+2.  <a id="Ref_UG-SS" class="anchor"></a>\[UG-SS\] -- Cybernetica AS. X-Road 6. Security Server User Guide. Document ID: UG-SS.
 
 <div id="2-migreerimine" class="anchor"></div>
 
