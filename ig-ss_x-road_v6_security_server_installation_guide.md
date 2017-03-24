@@ -6,8 +6,8 @@
 # Security Server Installation Guide
 **X-ROAD 6**
 
-Version: 2.7  
-23.02.2017  
+Version: 2.8  
+13.03.2017  
 Doc. ID: IG-SS  
 
 ---
@@ -33,6 +33,7 @@ Doc. ID: IG-SS
  30.09.2016 | 2.5     | Added chapter „[Different versions of xroad-\* package after successful upgrade](#45-different-versions-of-xroad--packages-after-successful-upgrade)“. |
  07.12.2016 | 2.6     | Added operational data monitoring packages. 2 GB RAM -&gt; 3 GB RAM |
  23.02.2017 | 2.7     | Converted to Github flavoured Markdown, added license text, adjusted tables for better output in PDF | Toomas Mölder
+ 13.04.2017 | 2.8     | Added token ID formatting                                       | Cybernetica AS
 
 ## Table of Contents
 
@@ -244,6 +245,7 @@ To configure support for hardware security tokens (smartcard, USB token, Hardwar
 
         sudo service xroad-signer restart
 
+If you are running a high availability (HA) hardware token setup (such as a cluster with replicated tokens) then you may need to constrain the token identifier format such that the token replicas can be seen as the same token. The token identifier format can be changed in /etc/xroad/devices.ini via the `token_id_format` property (default value: `{moduleType}{slotIndex}{serialNumber}{label}`). Removing certain parts of the identifier will allow the HA setup to work correctly when one of the tokens goes down and is replaced by a replica. For example, if the token replicas are reported to be on different slots the `{slotIndex}` part should be removed from the identifier format.
 
 ### 2.8 Installing Support for Monitoring
 
@@ -354,7 +356,7 @@ If the following error message is displayed during PostgreSQL installation:
 
     Error: The locale requested by the environment is invalid.
     Error: could not create default cluster. Please create it manually with 
-	    pg_createcluster 9.3 main –start,
+        pg_createcluster 9.3 main –start,
 
 use the following command to create the PostgreSQL data cluster:
 
@@ -401,3 +403,4 @@ Sometimes, after using `sudo apt-get upgrade` command, some of the packages are 
 To be sure that packages are installed correctly please use `sudo apt upgrade` or `sudo apt-get dist-upgrade` commands.
 
 Please note that `xroad-jetty9 package` version can be different from other packages’ versions.
+
