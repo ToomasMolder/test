@@ -1368,13 +1368,13 @@ The message log database can be located outside of the security server. The foll
 
         root@security_server:~ # service xroad-proxy stop
 
-5.  Configure the database connection parameters to achieve encrypted connections, in `/etc/xroad/db.properties` (messagelog.hibernate.connection.url on one line):
+5.  Configure the database connection parameters to achieve encrypted connections, in `/etc/xroad/db.properties` (NB! `messagelog.hibernate.connection.url` on one line, without spaces within URL):
 
         messagelog.hibernate.jdbc.use_streams_for_binary = true
         messagelog.hibernate.dialect = ee.ria.xroad.common.db.CustomPostgreSQLDialect
         messagelog.hibernate.connection.driver_class = org.postgresql.Driver
-        messagelog.hibernate.connection.url = \
-		jdbc:postgresql://db_host:5432/messagelog_dbname?ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory
+        messagelog.hibernate.connection.url = jdbc:postgresql://db_host:5432/\
+		    messagelog_dbname?ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory
         messagelog.hibernate.connection.username = messagelog_user
         messagelog.hibernate.connection.password = messagelog_password
 
