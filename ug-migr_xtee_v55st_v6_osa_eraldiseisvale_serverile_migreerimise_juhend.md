@@ -2,7 +2,7 @@
 
 
 Redaktsioon: 0.3  
-22.03.2017  
+24.03.2017  
 Dokumendi id: UG-MIGR  
 
 ---
@@ -13,7 +13,7 @@ Dokumendi id: UG-MIGR
  ---------- | ----------- | ------------------------------------------------------------- | --------------------
  15.02.2017 | 0.1         | Esimene tulem                                                 | Kristo Heero        
  17.03.2017 | 0.2         | Märkus sisemise TLS-sertifikaadi loomise kohta                | Kristo Heero        
- 22.03.2017 | 0.3         | Mittesisulised formaadimuudatused PDF-väljundi tarbeks        | Toomas Mölder
+ 24.03.2017 | 0.3         | Mittesisulised formaadimuudatused PDF-väljundi tarbeks        | Toomas Mölder
 
 ## Sisukord
 
@@ -41,9 +41,9 @@ Selle dokumendi eesmärk on anda konkreetsed juhised, kuidas läbi viia versioon
 
 ### 1.2 Viited
 
-1.  <a id="Ref_IG-SS" class="anchor"></a>\[IG-SS\] Cybernetica AS. X-Road 6. Security Server Installation Guide. Document ID: IG-SS.
+1.  <a id="Ref_IG-SS" class="anchor"></a>\[IG-SS\] Cybernetica AS. X-Road 6. Security Server Installation Guide. Document ID: IG-SS, <http://x-road.eu/docs/x-road_v6_security_server_installation_guide.pdf>.
 
-2.  <a id="Ref_UG-SS" class="anchor"></a>\[UG-SS\] Cybernetica AS. X-Road 6. Security Server User Guide. Document ID: UG-SS.
+2.  <a id="Ref_UG-SS" class="anchor"></a>\[UG-SS\] Cybernetica AS. X-Road 6. Security Server User Guide. Document ID: UG-SS, <http://x-road.eu/docs/x-road_v6_security_server_user_guide.pdf>.
 
 ## 2 Migreerimine
 
@@ -112,9 +112,10 @@ Selle dokumendi eesmärk on anda konkreetsed juhised, kuidas läbi viia versioon
 8. Veendu, et uues v6 turvaserveris jäi riistvaralise krüptoseadme tugi tööle (näiteks uue võtme genereerimine õnnestub) (vt peatükki "Installing the Support for Hardware Tokens" \[[IG-SS](#Ref_IG-SS)\] ja peatükki "Security Tokens, Keys, and Certificates" \[[UG-SS](#Ref_UG-SS)\]). Vajadusel teosta vajalikud tegevused vastavalt kasutuses oleva riistvaralise krüptoseadme juhendile.
 
 9. Genereeri uues v6 turvaserveris uus sisemine TLS-sertifikaat (vt peatükki "Changing the Internal TLS Key and Certificate" \[[UG-SS](#Ref_UG-SS)\]) ja vajadusel impordi uus TLS-sertifikaat ka vastavatesse infosüsteemidesse.  
-**Märkus:** kui v6 turvaserveri versioon on 6.8.6, siis kasutajaliideses esineva vea tõttu ei ole võimalik seal uut sisemist TLS-sertifikaati luua. Samas saab selle genereerida aga käsurea terminalis, millele järgnevalt tuleb taaskäivitada ka *xroad-proxy* teenus. Käsurea terminalis:
+**Märkus:** kui v6 turvaserveri versioon on 6.8.6, siis kasutajaliideses esineva vea tõttu ei ole võimalik seal uut sisemist TLS-sertifikaati luua. Samas saab selle genereerida aga käsurea terminalis, millele järgnevalt tuleb taaskäivitada ka *xroad-proxy* teenus. Käsurea terminalis (esimene käsk ühel real):
 
-       sudo -u xroad /usr/share/xroad/scripts/generate_certificate.sh -n internal -f -S -p  
+       sudo -u xroad /usr/share/xroad/scripts/generate_certificate.sh \
+	   -n internal -f -S -p  
        sudo restart xroad-proxy  
 
 10. Teavita X-tee keskust, et vana v6 turvaserveri IP-aadress asendataks uue v6 turvaserveri IP-aadressiga. Pärast aadressivahetust keskserveris levib muudatus globaalse konfiguratsiooniga kõigile turvaserveritele ning edaspidi päringuid vanasse v6 turvaserverisse enam ei suunata (kui turvaserver pakkus teenust).
